@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.SnsMini">
+        android:theme="@style/NewAppTheme">
         <activity
             android:name="com.sns.snsmini.SplashActivity"
             android:screenOrientation="sensor"
@@ -19,16 +19,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity
-            android:name="com.sns.snsmini.MainActivity"
-            android:screenOrientation="sensor"
-            android:configChanges="orientation|screenSize|screenLayout|keyboard"></activity>
-
-        <activity
-            android:name="com.sns.snsmini.activity.login.LoginActivity"
-            android:screenOrientation="sensor"
-            android:configChanges="orientation|screenSize|screenLayout|keyboard"></activity>
 
         <activity
             android:name="com.sns.snsmini.activity.signUp.SignUpActivity"
@@ -45,6 +35,21 @@
                     android:host="google.com" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name="com.sns.snsmini.MainActivity"
+            android:screenOrientation="sensor"
+            android:configChanges="orientation|screenSize|screenLayout|keyboard"></activity>
+
+        <activity
+            android:name="com.sns.snsmini.activity.login.LoginActivity"
+            android:screenOrientation="sensor"
+            android:configChanges="orientation|screenSize|screenLayout|keyboard"></activity>
+
+        <activity
+            android:name="com.sns.snsmini.activity.post.PostRegistActivity"
+            android:screenOrientation="sensor"
+            android:configChanges="orientation|screenSize|screenLayout|keyboard"></activity>
 
     </application>
 
