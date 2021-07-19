@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "527913258088",
+    "project_id": "smsmini-9e60b",
+    "storage_bucket": "smsmini-9e60b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:527913258088:android:b96ba71ab0f475d5537fdd",
+        "android_client_info": {
+          "package_name": "com.sns.snsmini"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "527913258088-e072kch1qf40n8kt7qmtu2a6hutc06ht.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9wTtZXaXQN9ilCuCJA3cyl4MRoVNtWkI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "527913258088-e072kch1qf40n8kt7qmtu2a6hutc06ht.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

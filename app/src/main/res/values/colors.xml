@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="colorPrimary">#6200EE</color>
+    <!--    <color name="colorPrimaryDark">#3700B3</color>-->
+    <color name="colorPrimaryDark">#1e648e</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="button_light_blue">#1e648e</color>
+    <color name="button_gray">#e5e5e5</color>
+
+    <!--  common  -->
+    <color name="transparent">#00000000</color>
+
+    <!--  text  -->
+    <color name="text_white">#ffffff</color>
+    <color name="text_black">#242424</color>
+    <color name="text_red">#CA0505</color>
+    <color name="text_gray">#333333</color>
+    <color name="text_light_gray">#666666</color>
+    <color name="text_dark_gray">#5D5D5D</color>
+
+    <!--    background  -->
+    <color name="bg_white">#fcfcfc</color>
+    <color name="bg_title_blue">#1e648e</color>
+    <color name="bg_search_tray">#3d8bba</color>
+    <color name="line_grey">#cccccc</color>
+    <color name="bg_grey">#eeeeee</color>
+    <color name="bg_light_grey">#F6F6F6</color>
+    <color name="bg_dark_grey">#707070</color>
+    <color name="bg_list_title">#C2E2E8</color>
+    <color name="bg_list_select">#D4F4FA</color>
+
+</resources>
