@@ -14,6 +14,7 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import com.sns.snsmini.MainActivity
 import com.sns.snsmini.R
+import com.sns.snsmini.activity.profile.PassWordSetActivity
 import com.sns.snsmini.activity.signUp.SignUpActivity
 import kotlinx.android.synthetic.main.actiity_login.*
 import kotlinx.android.synthetic.main.actiity_login.et_id
@@ -64,6 +65,10 @@ class LoginActivity : AppCompatActivity() {
 
         btn_sign_up.setOnClickListener {
             moveSignUp()
+        }
+
+        btn_reset_pw.setOnClickListener {
+            moveResetPw()
         }
     }
 
@@ -126,6 +131,12 @@ class LoginActivity : AppCompatActivity() {
     private fun moveMain() {
         val intent = Intent(this, MainActivity::class.java)
         intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY)
+        startActivity(intent)
+        finish()
+    }
+
+    private fun moveResetPw() {
+        val intent = Intent(this, PassWordSetActivity::class.java)
         startActivity(intent)
     }
 

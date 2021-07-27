@@ -9,21 +9,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/NewAppTheme">
+        <activity android:name=".activity.profile.ProfileActivity"></activity>
+        <activity android:name=".activity.profile.PassWordSetActivity" />
         <activity
-            android:name="com.sns.snsmini.SplashActivity"
-            android:screenOrientation="sensor"
-            android:configChanges="orientation|screenSize|screenLayout|keyboard">
+            android:name=".SplashActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboard"
+            android:screenOrientation="sensor">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
-            android:name="com.sns.snsmini.activity.signUp.SignUpActivity"
-            android:screenOrientation="sensor"
-            android:configChanges="orientation|screenSize|screenLayout|keyboard">
+            android:name=".activity.signUp.SignUpActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboard"
+            android:screenOrientation="sensor">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -31,26 +32,22 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data
-                    android:scheme="http"
-                    android:host="google.com" />
+                    android:host="google.com"
+                    android:scheme="http" />
             </intent-filter>
         </activity>
-
         <activity
-            android:name="com.sns.snsmini.MainActivity"
-            android:screenOrientation="sensor"
-            android:configChanges="orientation|screenSize|screenLayout|keyboard"></activity>
-
+            android:name=".MainActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboard"
+            android:screenOrientation="sensor" />
         <activity
-            android:name="com.sns.snsmini.activity.login.LoginActivity"
-            android:screenOrientation="sensor"
-            android:configChanges="orientation|screenSize|screenLayout|keyboard"></activity>
-
+            android:name=".activity.login.LoginActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboard"
+            android:screenOrientation="sensor" />
         <activity
-            android:name="com.sns.snsmini.activity.post.PostRegistActivity"
-            android:screenOrientation="sensor"
-            android:configChanges="orientation|screenSize|screenLayout|keyboard"></activity>
-
+            android:name=".activity.post.PostRegistActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboard"
+            android:screenOrientation="sensor" />
     </application>
 
 </manifest>

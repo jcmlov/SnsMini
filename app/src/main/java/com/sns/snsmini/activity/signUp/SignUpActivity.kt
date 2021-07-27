@@ -32,7 +32,6 @@ class SignUpActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.actiity_sign_up)
 
-        // Initialize Firebase Auth
         auth = Firebase.auth
 
         initView()
@@ -40,7 +39,6 @@ class SignUpActivity : AppCompatActivity() {
 
     public override fun onStart() {
         super.onStart()
-        // Check if user is signed in (non-null) and update UI accordingly.
         val currentUser = auth.currentUser
         if(currentUser != null){
             reload();
@@ -67,7 +65,6 @@ class SignUpActivity : AppCompatActivity() {
     }
 
     private fun initView() {
-
         rl_sign_up_container.setOnClickListener {
             if(validationCheck()) {
                 builder.setMessage(getString(R.string.confirm_sgin_up))
@@ -85,7 +82,6 @@ class SignUpActivity : AppCompatActivity() {
         btn_login.setOnClickListener {
             moveLogin()
         }
-
     }
 
     private fun validationCheck(): Boolean {
@@ -151,8 +147,6 @@ class SignUpActivity : AppCompatActivity() {
     }
 
     private fun moveLogin() {
-        val intent = Intent(this, LoginActivity::class.java)
-        startActivity(intent)
         finish()
     }
 

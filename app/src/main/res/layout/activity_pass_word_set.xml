@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.login.LoginActivity">
+    tools:context=".activity.profile.PassWordSetActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,7 +17,7 @@
             android:layout_width="230dp"
             android:layout_height="160dp"
             android:layout_marginTop="54dp"
-            android:text="SNS MINI"
+            android:text="비밀번호\n재설정"
             android:textColor="#ffffff"
             android:gravity="center"
             android:textSize="50dp"
@@ -77,42 +77,10 @@
                 android:alpha="0.5"
                 android:background="#dddddd" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="43dp"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="34dp"
-                    android:layout_height="34dp"
-                    android:layout_marginLeft="6dp"
-                    android:background="@drawable/ico_pw" />
-
-                <EditText
-                    android:id="@+id/et_pass"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="6dp"
-                    android:textSize="15dp"
-                    android:background="@null"
-                    android:hint="비밀번호"
-                    android:inputType="textPassword"
-                    android:textColorHint="#ffffff"
-                    android:textColor="#ffffff" />
-
-            </LinearLayout>
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:alpha="0.5"
-                android:background="#dddddd" />
-
         </LinearLayout>
 
         <RelativeLayout
-            android:id="@+id/rl_login_container"
+            android:id="@+id/rl_reset_pw_container"
             android:layout_width="253dp"
             android:layout_height="47dp"
             android:layout_marginTop="20dp"
@@ -135,37 +103,10 @@
                     android:layout_height="wrap_content"
                     android:textSize="18dp"
                     android:textColor="#ffffff"
-                    android:text="로그인"/>
+                    android:text="메일 보내기"/>
 
             </LinearLayout>
         </RelativeLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_gravity="center_horizontal"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="18dp"
-                android:textColor="#ffffff"
-                android:id="@+id/btn_sign_up"
-                android:text="회원가입"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="18dp"
-                android:layout_marginLeft="30dp"
-                android:textColor="#ffffff"
-                android:id="@+id/btn_reset_pw"
-                android:text="비밀번호 재설정"/>
-
-        </LinearLayout>
 
     </LinearLayout>
 

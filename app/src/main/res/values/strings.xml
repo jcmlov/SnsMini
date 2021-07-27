@@ -8,19 +8,23 @@
     <string name="not_equal_pass_confirm">비밀번호가 일치하지 않습니다.</string>
     <string name="authentication_fail">로그인에 실패하였습니다.</string>
     <string name="confirm_sgin_up_fail">회원가입에 실패하였습니다.</string>
+    <string name="send_mail_fail">메일 발송에 실패하였습니다.</string>
 
     <string name="confirm_sgin_up_success">정상적으로 가입이 완료되었습니다.</string>
     <string name="authentication_success">로그인에 성공하였습니다.</string>
+    <string name="send_mail_success">정상적으로 메일을 발송하였습니다.</string>
 
     <string name="fail_to_already_use_email">계정이 이미 가입되어 있습니다.</string>
 
     <string name="confirm_login">로그인 하시겠습니까?</string>
     <string name="confirm_sgin_up">회원가입 하시겠습니까?</string>
     <string name="confirm_save">저장 하시겠습니까?</string>
+    <string name="confirm_send_mail">메일을 발송하시겠습니까?</string>
 
     <string name="login">로그인</string>
     <string name="sign_up">가입</string>
     <string name="save">저장</string>
+    <string name="send">발송</string>
 
     <string name="cancel">취소</string>
 

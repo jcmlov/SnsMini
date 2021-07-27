@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.login.LoginActivity">
+    tools:context=".activity.profile.ProfileActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,21 +17,11 @@
             android:layout_width="230dp"
             android:layout_height="160dp"
             android:layout_marginTop="54dp"
-            android:text="SNS MINI"
+            android:text="회원정보"
             android:textColor="#ffffff"
             android:gravity="center"
             android:textSize="50dp"
             android:layout_gravity="center_horizontal" />
-
-        <TextView
-            android:id="@+id/login_dev"
-            android:layout_width="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_height="30dp"
-            android:textSize="20dp"
-            android:visibility="gone"
-            android:textColor="#ffffff"
-            android:text="Development" />
 
         <LinearLayout
             android:layout_width="253dp"
@@ -108,62 +98,6 @@
                 android:layout_height="2dp"
                 android:alpha="0.5"
                 android:background="#dddddd" />
-
-        </LinearLayout>
-
-        <RelativeLayout
-            android:id="@+id/rl_login_container"
-            android:layout_width="253dp"
-            android:layout_height="47dp"
-            android:layout_marginTop="20dp"
-            android:layout_gravity="center_horizontal"
-            android:background="@drawable/selector_top_button">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:gravity="center_vertical">
-
-                <ImageView
-                    android:layout_width="33dp"
-                    android:layout_height="33dp"
-                    android:background="@drawable/ico_login" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="18dp"
-                    android:textColor="#ffffff"
-                    android:text="로그인"/>
-
-            </LinearLayout>
-        </RelativeLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_gravity="center_horizontal"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="18dp"
-                android:textColor="#ffffff"
-                android:id="@+id/btn_sign_up"
-                android:text="회원가입"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="18dp"
-                android:layout_marginLeft="30dp"
-                android:textColor="#ffffff"
-                android:id="@+id/btn_reset_pw"
-                android:text="비밀번호 재설정"/>
 
         </LinearLayout>
 
