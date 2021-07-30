@@ -4,6 +4,7 @@
     <string name="input_email">이메일을 입력하세요.</string>
     <string name="input_pass">비밀번호를 입력하세요.</string>
     <string name="input_pass_confirm">비밀번호 확인을 입력하세요.</string>
+    <string name="input_phone_not_match">정확한 핸드폰 번호를 입력하세요.</string>
 
     <string name="not_equal_pass_confirm">비밀번호가 일치하지 않습니다.</string>
     <string name="authentication_fail">로그인에 실패하였습니다.</string>

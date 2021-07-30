@@ -24,9 +24,11 @@
             android:layout_gravity="center_horizontal" />
 
         <LinearLayout
-            android:layout_width="253dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="120dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:layout_gravity="center_horizontal"
             android:orientation="vertical">
 
@@ -46,19 +48,56 @@
                     android:layout_width="34dp"
                     android:layout_height="34dp"
                     android:layout_marginLeft="6dp"
-                    android:background="@drawable/ico_user_login" />
+                    android:background="@drawable/baseline_person_white_18" />
 
                 <EditText
-                    android:id="@+id/et_id"
+                    android:id="@+id/et_user_name"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="6dp"
-                    android:inputType="textEmailAddress"
+                    android:inputType="textPersonName"
                     android:textSize="15dp"
                     android:background="@null"
-                    android:hint="이메일"
+                    android:hint="이름"
                     android:textColorHint="#ffffff"
                     android:textColor="#ffffff" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:alpha="0.5"
+                android:background="#dddddd" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:gravity="center_vertical"
+                android:id="@+id/ll_birth_day"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:layout_marginLeft="6dp"
+                    android:background="@drawable/baseline_event_available_white_18" />
+
+                <EditText
+                    android:id="@+id/et_birth_day"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="6dp"
+                    android:inputType="text"
+                    android:textSize="15dp"
+                    android:background="@null"
+                    android:textIsSelectable="true"
+                    android:clickable="true"
+                    android:editable="false"
+                    android:hint="생년월일"
+                    android:textColorHint="#ffffff"
+                    android:textColor="#ffffff"
+                    tools:ignore="Deprecated" />
+
             </LinearLayout>
 
             <ImageView
@@ -77,17 +116,76 @@
                     android:layout_width="34dp"
                     android:layout_height="34dp"
                     android:layout_marginLeft="6dp"
-                    android:background="@drawable/ico_pw" />
+                    android:background="@drawable/baseline_phone_white_18" />
 
                 <EditText
-                    android:id="@+id/et_pass"
+                    android:id="@+id/et_celphone"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="6dp"
+                    android:inputType="phone"
+                    android:textSize="15dp"
+                    android:maxLength="13"
+                    android:background="@null"
+                    android:hint="전화번호"
+                    android:textColorHint="#ffffff"
+                    android:textColor="#ffffff" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:alpha="0.5"
+                android:background="#dddddd" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:layout_marginLeft="6dp"
+                    android:background="@drawable/baseline_home_white_18" />
+
+                <EditText
+                    android:id="@+id/et_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="6dp"
+                    android:inputType="textPersonName"
                     android:textSize="15dp"
                     android:background="@null"
-                    android:hint="비밀번호"
-                    android:inputType="textPassword"
+                    android:hint="주소"
+                    android:textColorHint="#ffffff"
+                    android:textColor="#ffffff" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:alpha="0.5"
+                android:background="#dddddd" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_address_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="6dp"
+                    android:inputType="textPersonName"
+                    android:textSize="15dp"
+                    android:background="@null"
+                    android:hint="상세주소"
                     android:textColorHint="#ffffff"
                     android:textColor="#ffffff" />
 
@@ -100,6 +198,35 @@
                 android:background="#dddddd" />
 
         </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_update_profile_container"
+            android:layout_width="253dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/selector_top_button">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:background="@drawable/baseline_save_alt_white_18" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18dp"
+                    android:textColor="#ffffff"
+                    android:text="저장"/>
+
+            </LinearLayout>
+        </RelativeLayout>
 
     </LinearLayout>
 

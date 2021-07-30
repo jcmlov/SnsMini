@@ -7,6 +7,7 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import com.sns.snsmini.activity.login.LoginActivity
 import com.sns.snsmini.activity.post.PostRegistActivity
+import com.sns.snsmini.activity.profile.ProfileActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -44,6 +45,10 @@ class MainActivity : AppCompatActivity() {
             moveAddPost()
         }
 
+        profile_btn.setOnClickListener {
+            moveProfile()
+        }
+
         logout_btn.setOnClickListener {
             Firebase.auth.signOut()
             val intent = Intent(this, LoginActivity::class.java)
@@ -60,6 +65,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun moveAddPost() {
         val intent = Intent(this, PostRegistActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun moveProfile() {
+        val intent = Intent(this, ProfileActivity::class.java)
         startActivity(intent)
     }
 
