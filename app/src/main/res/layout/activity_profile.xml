@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="@drawable/painting"
+        android:background="@drawable/texture"
         tools:context=".fragment.login.LoginFragment">
 
         <TextView
@@ -26,7 +26,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="120dp"
+            android:layout_marginTop="40dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_gravity="center_horizontal"
@@ -127,7 +127,7 @@
                     android:textSize="15dp"
                     android:maxLength="13"
                     android:background="@null"
-                    android:hint="전화번호"
+                    android:hint="핸드폰"
                     android:textColorHint="#ffffff"
                     android:textColor="#ffffff" />
 
@@ -200,10 +200,43 @@
         </LinearLayout>
 
         <RelativeLayout
-            android:id="@+id/rl_update_profile_container"
-            android:layout_width="253dp"
+            android:id="@+id/rl_update_picture_container"
+            android:layout_width="match_parent"
             android:layout_height="47dp"
             android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/selector_top_button">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:background="@drawable/baseline_add_a_photo_white_18" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18dp"
+                    android:textColor="#ffffff"
+                    android:text="프로필 사진"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_update_profile_container"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:layout_gravity="center_horizontal"
             android:background="@drawable/selector_top_button">
 

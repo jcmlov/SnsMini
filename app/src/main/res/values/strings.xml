@@ -1,10 +1,16 @@
 <resources>
     <string name="app_name">SnsMini</string>
 
+    <string name="input_name">이름을 입력하세요.</string>
+    <string name="input_birth_day">생년월일을 입력하세요.</string>
+    <string name="input_phone">핸드폰 번호를 입력하세요.</string>
     <string name="input_email">이메일을 입력하세요.</string>
     <string name="input_pass">비밀번호를 입력하세요.</string>
     <string name="input_pass_confirm">비밀번호 확인을 입력하세요.</string>
     <string name="input_phone_not_match">정확한 핸드폰 번호를 입력하세요.</string>
+
+    <string name="input_title">제목을 입력하세요.</string>
+    <string name="input_content">내용을 입력하세요.</string>
 
     <string name="not_equal_pass_confirm">비밀번호가 일치하지 않습니다.</string>
     <string name="authentication_fail">로그인에 실패하였습니다.</string>
@@ -14,8 +20,16 @@
     <string name="confirm_sgin_up_success">정상적으로 가입이 완료되었습니다.</string>
     <string name="authentication_success">로그인에 성공하였습니다.</string>
     <string name="send_mail_success">정상적으로 메일을 발송하였습니다.</string>
+    <string name="confirm_update_profile_success">정상적으로 회원정보를 저장하였습니다.</string>
+    <string name="confirm_regist_post_success">정상적으로 내용을 저장하였습니다.</string>
+    <string name="confirm_upload_picture_success">정상적으로 사진을 저장하였습니다.</string>
 
     <string name="fail_to_already_use_email">계정이 이미 가입되어 있습니다.</string>
+    <string name="fail_update_profile">회원정보를 저장하는데 문제가 발생되었습니다.</string>
+    <string name="fail_regist_post">내용을 저장하는데 문제가 발생되었습니다.</string>
+    <string name="fail_upload_picture">사진을 저장하는데 문제가 발생하였습니다.</string>
+    <string name="fail_load_data_nothing">등록된 데이터가 존재하지 않습니다.</string>
+    <string name="fail_load_data">데이터를 불러오는데 문제가 발생되었습니다.</string>
 
     <string name="confirm_login">로그인 하시겠습니까?</string>
     <string name="confirm_sgin_up">회원가입 하시겠습니까?</string>

@@ -36,7 +36,7 @@
                 android:orientation="horizontal">
 
                 <EditText
-                    android:id="@+id/et_title"
+                    android:id="@+id/et_post_title"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="6dp"
@@ -63,7 +63,7 @@
                 android:orientation="horizontal">
 
                 <EditText
-                    android:id="@+id/et_content"
+                    android:id="@+id/et_post_content"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="left"
@@ -95,6 +95,8 @@
         android:layout_width="match_parent"
         android:layout_height="47dp"
         android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
