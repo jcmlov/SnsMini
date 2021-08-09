@@ -4,32 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/texture"
     tools:context=".activity.profile.ProfileActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_img"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/baseline_account_circle_white_48"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="@drawable/texture"
-        tools:context=".fragment.login.LoginFragment">
-
-        <TextView
-            android:layout_width="230dp"
-            android:layout_height="160dp"
-            android:layout_marginTop="54dp"
-            android:text="회원정보"
-            android:textColor="#ffffff"
-            android:gravity="center"
-            android:textSize="50dp"
-            android:layout_gravity="center_horizontal" />
+        app:layout_constraintTop_toBottomOf="@+id/profile_img">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
             android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="10dp"
             android:orientation="vertical">
 
             <ImageView
@@ -55,12 +57,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="6dp"
-                    android:inputType="textPersonName"
-                    android:textSize="15dp"
                     android:background="@null"
                     android:hint="이름"
+                    android:inputType="textPersonName"
+                    android:textColor="#ffffff"
                     android:textColorHint="#ffffff"
-                    android:textColor="#ffffff" />
+                    android:textSize="15dp" />
             </LinearLayout>
 
             <ImageView
@@ -70,10 +72,10 @@
                 android:background="#dddddd" />
 
             <LinearLayout
+                android:id="@+id/ll_birth_day"
                 android:layout_width="match_parent"
                 android:layout_height="43dp"
                 android:gravity="center_vertical"
-                android:id="@+id/ll_birth_day"
                 android:orientation="horizontal">
 
                 <ImageView
@@ -87,15 +89,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="6dp"
-                    android:inputType="text"
-                    android:textSize="15dp"
                     android:background="@null"
-                    android:textIsSelectable="true"
                     android:clickable="true"
                     android:editable="false"
                     android:hint="생년월일"
-                    android:textColorHint="#ffffff"
+                    android:inputType="text"
                     android:textColor="#ffffff"
+                    android:textColorHint="#ffffff"
+                    android:textIsSelectable="true"
+                    android:textSize="15dp"
                     tools:ignore="Deprecated" />
 
             </LinearLayout>
@@ -123,13 +125,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="6dp"
-                    android:inputType="phone"
-                    android:textSize="15dp"
-                    android:maxLength="13"
                     android:background="@null"
                     android:hint="핸드폰"
+                    android:inputType="phone"
+                    android:maxLength="13"
+                    android:textColor="#ffffff"
                     android:textColorHint="#ffffff"
-                    android:textColor="#ffffff" />
+                    android:textSize="15dp" />
 
             </LinearLayout>
 
@@ -156,12 +158,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="6dp"
-                    android:inputType="textPersonName"
-                    android:textSize="15dp"
                     android:background="@null"
                     android:hint="주소"
+                    android:inputType="textPersonName"
+                    android:textColor="#ffffff"
                     android:textColorHint="#ffffff"
-                    android:textColor="#ffffff" />
+                    android:textSize="15dp" />
 
             </LinearLayout>
 
@@ -182,12 +184,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="6dp"
-                    android:inputType="textPersonName"
-                    android:textSize="15dp"
                     android:background="@null"
                     android:hint="상세주소"
+                    android:inputType="textPersonName"
+                    android:textColor="#ffffff"
                     android:textColorHint="#ffffff"
-                    android:textColor="#ffffff" />
+                    android:textSize="15dp" />
 
             </LinearLayout>
 
@@ -203,10 +205,10 @@
             android:id="@+id/rl_update_picture_container"
             android:layout_width="match_parent"
             android:layout_height="47dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
             android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
             android:background="@drawable/selector_top_button">
 
             <LinearLayout
@@ -223,9 +225,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="18dp"
+                    android:text="프로필 사진"
                     android:textColor="#ffffff"
-                    android:text="프로필 사진"/>
+                    android:textSize="18dp" />
 
             </LinearLayout>
         </RelativeLayout>
@@ -234,10 +236,10 @@
             android:id="@+id/rl_update_profile_container"
             android:layout_width="match_parent"
             android:layout_height="47dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
             android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
             android:background="@drawable/selector_top_button">
 
             <LinearLayout
@@ -254,9 +256,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="18dp"
+                    android:text="저장"
                     android:textColor="#ffffff"
-                    android:text="저장"/>
+                    android:textSize="18dp" />
 
             </LinearLayout>
         </RelativeLayout>

@@ -43,6 +43,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth-ktx'
     implementation 'com.google.firebase:firebase-firestore-ktx'
     implementation 'com.google.firebase:firebase-storage-ktx'
+    implementation 'com.firebaseui:firebase-ui-storage:7.2.0'
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.1.0'
@@ -83,4 +84,6 @@ dependencies {
     implementation("androidx.multidex:multidex:2.0.1")
 
     implementation 'gun0912.ted:tedpermission:2.2.0'
+    implementation 'de.hdodenhof:circleimageview:3.0.1'
+
 }
