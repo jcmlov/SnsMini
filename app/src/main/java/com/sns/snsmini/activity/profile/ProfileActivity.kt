@@ -5,6 +5,8 @@ import android.app.DatePickerDialog
 import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
+import android.database.Cursor
+import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.media.ExifInterface
 import android.net.Uri
@@ -14,33 +16,34 @@ import android.provider.MediaStore
 import android.telephony.PhoneNumberFormattingTextWatcher
 import android.util.Log
 import android.view.inputmethod.InputMethodManager
-import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.FileProvider
+import androidx.loader.content.CursorLoader
 import com.bumptech.glide.Glide
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.auth.ktx.userProfileChangeRequest
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
-import com.google.firebase.storage.StorageReference
 import com.google.firebase.storage.ktx.storage
 import com.google.firebase.storage.ktx.storageMetadata
 import com.sns.snsmini.R
 import com.sns.snsmini.common.Constants
-import com.sns.snsmini.common.Constants.FIREBASE_URI
 import com.sns.snsmini.utils.AppHelperUtil
+import com.sns.snsmini.utils.ImgPathUtil
 import com.sns.snsmini.utils.StringUtils
 import com.sns.snsmini.vo.user.User
-import de.hdodenhof.circleimageview.CircleImageView
 import kotlinx.android.synthetic.main.activity_profile.*
 import java.io.File
+import java.io.FileOutputStream
 import java.io.IOException
+import java.io.InputStream
 import java.text.SimpleDateFormat
 import java.util.*
 
 
+@Suppress("DEPRECATION")
 class ProfileActivity : AppCompatActivity() {
 
     private val TAG: String = "ProfileActivity"
@@ -55,6 +58,7 @@ class ProfileActivity : AppCompatActivity() {
     private var mCurrentUri: Uri? = null
     private var profileImgPath: String = ""
     private var profileImgUri: Uri? = null
+    private var selectedUri: Uri? = null
 
     private var downloadUri: String? = null
     private var photoUrl: String? = null
@@ -96,7 +100,9 @@ class ProfileActivity : AppCompatActivity() {
                         if(profileImgUrl != null && "" != profileImgUrl) {
                             Glide.with(this).load(profileImgUrl).into(profile_img)
                         } else {
-                            Glide.with(this).load(R.drawable.baseline_account_circle_white_48).into(profile_img)
+                            Glide.with(this).load(R.drawable.baseline_account_circle_white_48).into(
+                                profile_img
+                            )
                         }
                     } else {
                         Toast.makeText(
@@ -123,6 +129,17 @@ class ProfileActivity : AppCompatActivity() {
 
         et_celphone.addTextChangedListener(PhoneNumberFormattingTextWatcher())
 
+        btn_take_picture.setOnClickListener {
+            dispatchTakePictureIntent()
+        }
+
+        btn_open_file.setOnClickListener {
+            val intent = Intent()
+            intent.type = "image/*";
+            intent.action = Intent.ACTION_GET_CONTENT;
+            startActivityForResult(intent, Constants.REQUEST_GET_PHOTO);
+        }
+
         rl_update_picture_container.setOnClickListener {
             dispatchTakePictureIntent()
         }
@@ -142,6 +159,7 @@ class ProfileActivity : AppCompatActivity() {
         }
     }
 
+    @SuppressLint("NewApi")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
@@ -170,6 +188,16 @@ class ProfileActivity : AppCompatActivity() {
                     exifDegree = 0
                 }
                 profile_img.setImageBitmap(AppHelperUtil.rotate(bitmap, exifDegree.toFloat()))
+            }
+        } else if (requestCode == Constants.REQUEST_GET_PHOTO) {
+            if (resultCode === RESULT_OK) {
+                selectedUri = data?.data!!
+
+                // profileImgPath = ImgPathUtil.getPath(this, data?.data!!).toString()
+                profileImgPath = ImgPathUtil.setImageAndSaveImageReturnPath(this, data)
+                uploadProfilePicture(profileImgPath, profileImgUri)
+
+                Glide.with(this).load(selectedUri).into(profile_img)
             }
         }
     }
@@ -260,17 +288,6 @@ class ProfileActivity : AppCompatActivity() {
         val user = Firebase.auth.currentUser
         val userInfo = User(userName, birthDay, celPhone, address, addressDetail, photoUrl)
         if (user != null) {
-            val profileUpdates = userProfileChangeRequest {
-                displayName = userName
-                photoUri = Uri.parse(photoUrl)
-            }
-
-            user!!.updateProfile(profileUpdates)
-                .addOnCompleteListener { task ->
-                    if (task.isSuccessful) {
-                    }
-                }
-
             db.collection("user").document(user.uid).set(userInfo).addOnSuccessListener { documentReference ->
                 Toast.makeText(
                     this,
